@@ -4,10 +4,8 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'build')));
 
-// For any request, send back the React app's index.html file
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'), (err) => {
     if (err) {

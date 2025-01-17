@@ -6,8 +6,8 @@ body, html {
   overflow-x: hidden;
   font-family: Arial, sans-serif;
   box-sizing: border-box; 
-  /* font-size: 16px; */
 }
+
 /* Styling for the loading screen */
 .loading-screen {
   display: flex;
@@ -115,7 +115,6 @@ body, html {
   padding: 30px;
 }
 
-/* Show dropdown on hover and keep it visible */
 .feature:hover .dropdown,
 .dropdown:hover {
   display: block;
@@ -210,7 +209,7 @@ body, html {
 }
 
 .icon {
-  width: 39px;
+  width: 50px;
   height: auto;
   margin-left: 15px;
   cursor: pointer;
@@ -225,9 +224,9 @@ body, html {
 
 .search-bar {
   width: 0;
-  height: 20px;
-  padding: 1px;
-  border: 1px solid #a9a06c;
+  height: 30px;
+  padding: 6px;
+  border: 2px solid #a9a06c;
   border-radius: 20px;
   font-size: 14px;
   opacity: 0;
@@ -249,24 +248,24 @@ body, html {
 .user-dropdown {
   display: none;
   position: absolute;
-  top: 90px; /* Adjust based on your layout */
-  right: 50px; /* Adjust based on your layout */
+  top: 90px; 
+  right: 50px; 
   background-color: #856842;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 165px;
-  height: 155px;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(-20px); /* Initially translate the dropdown upwards */
+  width: 200px;
+  height: 200px;
+  opacity: 0; 
+  transform: translateY(-20px); 
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10; /* Ensure the dropdown appears above other elements */
+  z-index: 10; 
 }
 
 /* Show dropdown when active */
 .user-dropdown.show {
   display: block;
-  opacity: 1; /* Make the dropdown visible */
-  transform: translateY(0); /* Move the dropdown back to its position */
+  opacity: 1; 
+  transform: translateY(0); 
 }
 
 /* Dropdown List Style */
@@ -278,12 +277,12 @@ body, html {
 
 /* Dropdown List Item */
 .user-dropdown li {
-  padding: 15px 15px;
+  padding: 20px 30px;
   border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease;
 }
 
-/* Remove border from last item */
+
 .user-dropdown li:last-child {
   border-bottom: none;
 }
@@ -292,30 +291,30 @@ body, html {
 .user-dropdown li a {
   text-decoration: none;
   color: #f9f7f6;
-  font-size: 20px;
+  font-size: 25px;
   display: block;
   transition: color 0.3s ease;
 }
 
-/* Hover effect on list items */
+
 .user-dropdown li:hover {
   background-color: #e3cba3;
 }
 
-/* Hover effect on the link */
+
 .user-dropdown li a:hover {
-  color: #0c0c0c; /* Change to your desired color on hover */
+  color: #0c0c0c; 
 }
 
 /* User Icon */
 .icon {
-  position: relative; /* Ensure the icon is positioned within its container */
-  z-index: 20; /* Make sure the icon is always above the dropdown */
-  cursor: pointer; /* Add cursor to indicate it's clickable */
+  position: relative; 
+  z-index: 20; 
+  cursor: pointer; 
 }
 
 .icon:hover {
-  opacity: 0.8; /* Slightly fade the icon on hover for effect */
+  opacity: 0.8; 
 }
 
 
@@ -333,12 +332,11 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  /* Hide Men/Women options on small screens */
+  
   .features {
       display: none;
   }
 
-  /* Center align logo and features on mobile */
   .logo-container {
       flex-direction: column;
       align-items: center;
@@ -348,7 +346,6 @@ p {
       width: 80px; 
   }
 
-  /* Adjust right icons on mobile */
   .right-icons {
       display: flex;
   }
@@ -379,10 +376,10 @@ p {
 /* Mobile Menu Styles */
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 30px;
   right: -300px;
   width: 300px;
-  height: 49vh;
+  height: 40vh;
   background-color: #EEE1C6 ;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
@@ -405,7 +402,7 @@ p {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.6rem;
   color: #111;
 }
 
@@ -475,8 +472,8 @@ p {
 
 @media (max-width: 768px) {
   .video-container {
-    height: auto;  /* Allow for scaling on smaller screens */
-    padding: 10px;  /* Add some space around the video */
+    height: auto;  
+    padding: 10px;  
   }
 
   .responsive-video {
@@ -541,9 +538,9 @@ p {
   background-color: #111111;
   color: #fff;
   padding: 15px 25px; 
-  border-radius: 25px; /* Slightly reduced from 30px */
+  border-radius: 25px; 
   border: 2px solid #111;
-  font-size: 14px; /* Reduced from 16px */
+  font-size: 14px; 
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -554,7 +551,6 @@ p {
   z-index: 1;
 }
 
-/* Keep the same hover effects */
 .shop-button::before {
   content: '';
   position: absolute;
@@ -577,7 +573,6 @@ p {
   width: 100%;
 }
 
-/* Responsive design */
 @media screen and (max-width: 480px) {
   .shop-button {
     padding: 10px 24px; 
@@ -597,7 +592,6 @@ p {
   box-sizing: border-box;
 }
 
-/* Heading for the Image Section */
 .image-carousel h2 {
   text-align: left;
   font-size: 2rem;
@@ -609,7 +603,6 @@ p {
   width: 90%;
 }
 
-/* Horizontal Scrolling Images Section */
 .scrolling-images {
   display: flex;
   gap: 20px;
@@ -624,7 +617,6 @@ p {
   scrollbar-color: #855E42 #f8ecd7;
 }
 
-/* Individual Image Card */
 .image-card {
   min-width: 250px;
   max-width: 250px;
@@ -635,26 +627,22 @@ p {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Hover Effect for Image Card */
 .image-card:hover {
   transform: scale(1.05);
 }
 
-/* Image inside the Card */
 .carousel-image {
   width: 100%; 
   height: 75%;
   border-radius: 8px;
 }
 
-/* Image Details Section */
 .image-details {
   padding: 10px;
   text-align: center;
   background-color: #f8ecd7;
 }
 
-/* Image Details Title */
 .image-details h3 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -662,14 +650,12 @@ p {
   color: #855E42;
 }
 
-/* Image Details Description */
 .image-details p {
   font-size: 1.4rem;
   color: #666;
   margin: 0;
 }
 
-/* Responsiveness for Smaller Screens */
 @media (min-width: 1200px) {
   .image-card {
     min-width: calc(25% - 20px);
@@ -720,7 +706,6 @@ p {
   }
 }
 
-/* Custom Scrollbar for Webkit Browsers */
 .scrolling-images::-webkit-scrollbar {
   width: 5px;
 }
@@ -751,7 +736,7 @@ p {
 .header {
   text-align: left;
   margin-bottom: 0;
-  margin-left: 6%; /* Ensure no extra margin on the left */
+  margin-left: 6%; 
   padding-left: 12%; 
 }
 
@@ -762,24 +747,23 @@ p {
 /* Image Styling */
 .image-container {
   display: flex;
-  justify-content: center; /* Centers the image horizontally */
+  justify-content: center; 
   margin-bottom: auto;
   background-color: #f8ecd7;
 }
 
 .image {
-  width: 65%; /* You can adjust this width as needed, e.g., 50%, 70%, 100% */
+  width: 65%; 
   height: auto;
-  object-fit: cover; /* Ensures image covers the space without distortion */
-  display: block; /* Removes any inline-block space */
+  object-fit: cover; 
+  display: block;
 }
 
 /* Below Grid Styling */
 .below-grid h4 {
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
-/* Individual Heading Adjustments */
 .heading1 {
   font-size: 21px;
   color: rgb(7, 7, 7);
@@ -799,16 +783,12 @@ p {
   text-align: center;
 }
 
-/* Media Queries for Responsiveness */
-
-/* For larger screens (like laptops, desktops, and large tablets) */
 @media (min-width: 764px) {
   .container {
     width: 90%;
   }
 }
 
-/* For tablets and smaller devices (portrait mode) */
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -822,6 +802,166 @@ p {
   }
 }
 
+/* Container for the  sports Carousel */
+.sport-carousel {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8ecd7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.sport-carousel h2 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b2727;
+  margin-bottom: 10px;
+  width: 30%;
+  padding-right: 50em;
+}
+
+.sport-images {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 5px 0;
+  scroll-behavior: smooth;
+  width: 100%;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #855e42 #f8ecd7;
+}
+
+.sport-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sport-images::-webkit-scrollbar-track {
+  background: #f8ecd7;
+}
+
+.sport-images::-webkit-scrollbar-thumb {
+  background-color: #855e42;
+  border-radius: 10px;
+}
+
+.sport-images::-webkit-scrollbar-thumb:hover {
+  background-color: #7a4e3a;
+}
+
+.sport-card {
+  position: relative;
+  min-width: calc(33.33% - 20px); 
+  max-width: 300px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sport-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-sport {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sport-button {
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  padding: 20px 35px; 
+  background-color: #111111;
+  color: #fff;
+  font-size: 17px; 
+  font-weight: 700;
+  border: 2px solid #111;
+  border-radius: 25px; 
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none; 
+  z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.sport-card:hover .sport-button,
+.sport-card.active .sport-button {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sport-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.sport-button:hover::before {
+  width: 100%;
+}
+
+.sport-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #000000;
+}
+
+.sport-card.active .sport-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 1200px) {
+  .sport-card {
+    min-width: calc(33.33% - 20px); 
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .sport-card {
+    min-width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 767px) {
+  .sport-card {
+    min-width: calc(100% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .sport-carousel h2 {
+    font-size: 1.5rem;
+  }
+
+  .sport-images {
+    gap: 15px;
+  }
+}
+
+
 .site-footer {
   background-color: #f8ecd7;
   padding: 1rem 1rem;
@@ -830,11 +970,11 @@ p {
 }
 
 .footer-sections {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 3rem;
   padding: 0 1rem;
 }
 
@@ -846,7 +986,7 @@ p {
 .footer-heading-expl, 
 .footer-heading-hlp, 
 .footer-heading-cmp {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 500;
   margin-bottom: 1rem;
   color: #7f4720;
@@ -865,7 +1005,7 @@ p {
 .footer-link {
   color: #707072;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: color 0.2s ease;
 }
 

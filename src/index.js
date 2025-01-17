@@ -6,18 +6,19 @@ import Loginform from './login';
 import './loginstyle.css';
 import Signupform from './signup';
 import './signupstyle.css';
+import RunningPage from './running';
+import './runstyle.css';
 
-// Import BrowserRouter and Routes for routing
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        {/* Define routes for your components */}
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Loginform />} />
         <Route path="/signup" element={<Signupform />} />
+        <Route path="/running" element={<RunningPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,

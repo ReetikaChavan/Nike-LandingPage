@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import Loginform from './login';
-import Signupform from './signup';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';  // Import Link from React Router
-
+import RunningPage from './running';
 
 const App = () => {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -160,6 +158,39 @@ const App = () => {
       src: 'media/sh6.jpg',
       name: 'KILLSHOT',
       price: '$110',
+    },
+  ];
+
+  const sportData = [
+    {
+      src: 'media/spt1.jpg',
+      link: '/running',
+      name: 'Running',
+    },
+    {
+      src: 'media/spt2.jpg',
+      link: '#',
+      name: 'Football',
+    },
+    {
+      src: 'media/spt3.jpg',
+      link: '#',
+      name: 'Tennis',
+    },
+    {
+      src: 'media/spt4.jpg',
+      link: '#',
+      name: 'Basketball',
+    },
+    {
+      src: 'media/spt5.jpg',
+      link: '#',
+      name: 'Traning and Gym',
+    },
+    {
+      src: 'media/spt6.jpg',
+      link: '#',
+      name: 'Dance',
     },
   ];
 
@@ -322,43 +353,57 @@ const App = () => {
                 <h4 className="heading2">RIDE EASY</h4>
                 <h4 className="heading3">A new take on the iconic Air Jordan 4</h4>
               </div>
+              </div>
+              
+              <div className="sport-carousel">
+              <h2>Shop By Sport</h2>
+              <div className="sport-images">
+                {sportData.map((image, index) => (
+                  <div className="sport-card" key={index}>
+                    <img src={image.src} alt={image.name} className="carousel-sport" />
+                    <Link to={image.link} className="sport-button">
+                      {image.name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="site-footer">
-  <div className="footer-sections">
-    <div className="footer-section">
-      <h3 className="footer-heading-expl">Resources</h3>
-      <ul className="footer-list">
-        {footerData.Resources.map((item, index) => (
-          <li key={index} className="footer-list-item">
-            <a href={item.url} className="footer-link">{item.title}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div className="footer-section">
-      <h3 className="footer-heading-hlp">Support</h3>
-      <ul className="footer-list">
-        {footerData.Support.map((item, index) => (
-          <li key={index} className="footer-list-item">
-            <a href={item.url} className="footer-link">{item.title}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div className="footer-section">
-      <h3 className="footer-heading-cmp">About Us</h3>
-      <ul className="footer-list">
-        {footerData.AboutUs.map((item, index) => (
-          <li key={index} className="footer-list-item">
-            <a href={item.url} className="footer-link">{item.title}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-</div>
-
+              <div className="footer-sections">
+                <div className="footer-section">
+                  <h3 className="footer-heading-expl">Resources</h3>
+                  <ul className="footer-list">
+                    {footerData.Resources.map((item, index) => (
+                      <li key={index} className="footer-list-item">
+                        <a href={item.url} className="footer-link">{item.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="footer-section">
+                  <h3 className="footer-heading-hlp">Support</h3>
+                  <ul className="footer-list">
+                    {footerData.Support.map((item, index) => (
+                      <li key={index} className="footer-list-item">
+                        <a href={item.url} className="footer-link">{item.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="footer-section">
+                  <h3 className="footer-heading-cmp">About Us</h3>
+                  <ul className="footer-list">
+                    {footerData.AboutUs.map((item, index) => (
+                      <li key={index} className="footer-list-item">
+                        <a href={item.url} className="footer-link">{item.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </>
       )}

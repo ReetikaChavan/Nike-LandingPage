@@ -23,7 +23,7 @@ const NikeSignUpPage = () => {
         <div className="nikeSloganContainer">
           <img
             className="nikeSloganImage"
-            src="./media/jdt.png" // Ensure this path is correct relative to your project
+            src="./media/jdt.png" 
             alt="Nike Slogan"
           />
         </div>

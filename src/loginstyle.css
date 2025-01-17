@@ -15,10 +15,10 @@
   overflow-x: hidden;
 }
 
-/* Slogan Section centered at top */
+/* Slogan*/
 .nikeSloganContainer {
   width: min(100px, 50vw);
-  margin: 0; /* Adjusted margin to keep it at the top */
+  margin: 0; 
   text-align: center;
   animation: fadeIn 0.8s ease-out;
   margin-right: 30cm;
@@ -32,7 +32,7 @@
   object-fit: contain;
 }
 
-/* Card styles with flexible sizing */
+/* Card */
 .nikeSignInCard {
   width: clamp(200px, 90%, 480px);
   min-height: min(500px, 80vh);
@@ -240,11 +240,10 @@
   }
   
   .nikeInputField {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; 
   }
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
