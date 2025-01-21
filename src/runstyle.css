@@ -1,6 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f8ecd7;
+}
+
 /* Navbar Styling */
 .nav {
-    background-color: #ECECEC;
+    background-color: #fadfb0;
     color: rgb(11, 11, 11);
     padding: 20px;
     text-align: center;
@@ -10,16 +17,16 @@
     font-style:oblique
 }
 
-.container {
+.runningcontainer {
     display: flex;
     min-height: 100vh;
 }
 
 /* Sidebar Styling */
-.sidebar {
+.runningsidebar {
     width: 250px;
-    background-color: #fffdfd;
-    border-right: 1px solid #fffbfb;
+    background-color: #f8ecd7;
+    /* border-right: 1px solid #fffbfb; */
     height: 100vh;
     position: fixed;
     overflow-y: auto;
@@ -28,22 +35,22 @@
     left: 20px;
 }
 
-.sidebar-nav {
+.sidebar-running {
     padding: 26px 0;
 }
 
-.nav-item {
+.running-item {
     position: relative;
     width: 100%;
 }
 
-.nav-button {
+.running-button {
     width: 100%;
     padding: 20px 16px;
     text-align: left;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 32px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -52,16 +59,16 @@
     transition: background-color 0.2s;
 }
 
-.nav-button:hover {
-    background-color: #eaeaea;
+.running-button:hover {
+    background-color: #fadfb0;
 }
 
-.nav-button.active {
-    background-color: #e5e5e5;
+.running-button.active {
+    background-color: #fadfb0;
 }
 
 .arrow {
-    font-size: 10px;
+    font-size: 11px;
     transition: transform 0.2s ease;
 }
 
@@ -69,22 +76,22 @@
     transform: rotate(180deg);
 }
 
-.dropdown {
-    background-color: #fff;
+.runningdropdown {
+    background-color: #f8ecd7;
     padding: 8px 0;
 }
 
-.dropdown-item {
+.runningdropdown-item {
     display: block;
     padding: 8px 32px;
     color: #666;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 25px;
     transition: background-color 0.2s;
 }
 
-.dropdown-item:hover {
-    background-color: #f0f0f0;
+.runningdropdown-item:hover {
+    background-color: #fadfb0;
 }
 
 /* Main Content Styling */
