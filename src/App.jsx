@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';  // Import Link from React Router
+import { Link } from 'react-router-dom';  
 import RunningPage from './running';
 
 const App = () => {
