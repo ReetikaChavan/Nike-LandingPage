@@ -23,7 +23,7 @@ const Running = () => {
     return () => clearInterval(intervalId); 
   }, []);
 
-  const menuItems = [
+  const runningMenuItems = [
     {
       title: "Shoes",
       items: ["Running Shoes", "Training Shoes", "Basketball Shoes", "Football Boots", "Tennis Shoes"]
@@ -156,14 +156,14 @@ const Running = () => {
       </nav>
 
       {/* Sidebar and Products Container */}
-      <div className="container">
+      <div className="runningcontainer">
         {/* Sidebar */}
-        <div className="sidebar">
-          <nav className="sidebar-nav">
-            {menuItems.map((menu, index) => (
-              <div key={index} className="nav-item">
+        <div className="runningsidebar">
+          <nav className="sidebar-running">
+            {runningMenuItems.map((menu, index) => (
+              <div key={index} className="running-item">
                 <button
-                  className={`nav-button ${openMenu === index ? 'active' : ''}`}
+                  className={`running-button ${openMenu === index ? 'active' : ''}`}
                   onClick={() => setOpenMenu(openMenu === index ? null : index)}
                 >
                   {menu.title}
@@ -171,9 +171,9 @@ const Running = () => {
                 </button>
 
                 {openMenu === index && (
-                  <div className="dropdown">
+                  <div className="runningdropdown">
                     {menu.items.map((item, itemIndex) => (
-                      <a key={itemIndex} href="#" className="dropdown-item">
+                      <a key={itemIndex} href="#" className="runningdropdown-item">
                         {item}
                       </a>
                     ))}
