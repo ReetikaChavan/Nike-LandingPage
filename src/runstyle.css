@@ -25,7 +25,7 @@ body {
 /* Sidebar Styling */
 .runningsidebar {
     width: 250px;
-    background-color: #f8ecd7;
+    background-color: rgb(248, 236, 215);
     /* border-right: 1px solid #fffbfb; */
     height: 100vh;
     position: fixed;
@@ -60,11 +60,11 @@ body {
 }
 
 .running-button:hover {
-    background-color: #fadfb0;
+    background-color: rgb(250, 223, 176);
 }
 
 .running-button.active {
-    background-color: #fadfb0;
+    background-color: rgb(250, 223, 176);
 }
 
 .arrow {
