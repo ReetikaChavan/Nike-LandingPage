@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css'; 
 import App from './App';
-import Loginform from './login';
+import Loginform from './signin';
 import './loginstyle.css';
 import Signupform from './signup';
 import './signupstyle.css';
@@ -16,7 +16,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/login" element={<Loginform />} />
+        <Route path="/signin" element={<Loginform />} />
         <Route path="/signup" element={<Signupform />} />
         <Route path="/running" element={<RunningPage />} />
       </Routes>

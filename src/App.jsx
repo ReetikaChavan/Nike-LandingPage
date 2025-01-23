@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';  // Import Link from React Router
-import RunningPage from './running';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';  
 
 const App = () => {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -292,7 +291,7 @@ const App = () => {
                       {showUserDropdown && (
                         <div className={`user-dropdown ${showUserDropdown ? 'show' : ''}`}>
                           <ul>
-                            <li><Link to="/login">Sign In</Link></li>  
+                            <li><Link to="/signin">Sign In</Link></li>  
                             <li><Link to="/signup">Sign Up</Link></li>  
                             <li><Link to="/">Sign Out</Link></li> 
                           </ul>
