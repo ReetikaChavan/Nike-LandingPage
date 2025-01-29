@@ -14,6 +14,8 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve the static files from the React frontend (build folder)
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Database Connection
@@ -27,7 +29,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Routes
 app.use('/api/auth', authRoutes);
 
-// Serve React frontend
+// Serve React frontend for all routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'), (err) => {
     if (err) {
@@ -37,6 +39,10 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+app.listen(port, async () => {
   console.log(`Server running on port ${port}`);
+  
+  // Dynamically import the open package and open the browser
+  const open = (await import('open')).default;
+  open('http://localhost:5000'); // Replace with the URL of your React app
 });
